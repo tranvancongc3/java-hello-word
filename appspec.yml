@@ -5,6 +5,6 @@ files:
     destination: /tmp/
 hooks:
   AfterInstall:
-    - location: scripts/restart_tomcat.sh
+    - location: restart_tomcat.sh
       timeout: 300
       runas: root
