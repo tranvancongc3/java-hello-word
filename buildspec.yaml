@@ -3,6 +3,7 @@ phases:
   pre_build:
     commands:
       - echo Entering the pre_build phase...
+      - chmod +x gradlew
       - ./gradlew clean
       - echo $ENV_FILE | tr " " "\n" > .env
 
