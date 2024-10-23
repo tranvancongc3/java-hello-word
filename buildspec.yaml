@@ -20,4 +20,6 @@ phases:
 artifacts:
   files:
     - build/libs/*.war
+    - appspec.yml
+    - restart_tomcat.sh
   discard-paths: yes
