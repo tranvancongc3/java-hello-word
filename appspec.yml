@@ -1,0 +1,10 @@
+version: 0.0
+os: linux
+files:
+  - source: /build/libs/sbi-fpt-java.war
+    destination: /tmp/
+hooks:
+  AfterInstall:
+    - location: scripts/restart_tomcat.sh
+      timeout: 300
+      runas: root

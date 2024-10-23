@@ -1,0 +1,22 @@
+version: 0.2
+phases:
+  pre_build:
+    commands:
+      - echo Entering the pre_build phase...
+      - ./gradlew clean
+      - echo $ENV_FILE | tr " " "\n" > .env
+
+  build:
+    commands:
+      - echo Entering the build phase...
+      - ./gradlew war
+  
+  post_build:
+    commands:
+      - echo Entering the post_build phase...
+      - echo Build completed on `date`
+
+artifacts:
+  files:
+    - build/libs/*.war
+  discard-paths: yes
